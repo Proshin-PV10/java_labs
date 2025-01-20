@@ -8,6 +8,8 @@ public class part1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите номер задания 1,2,3,4,5 или 6");
         int numlab = scanner.nextInt();
+        int[] mas = {0, -3, 7, 4, 5, 4, 3};
+
         switch (numlab) {
             case 1:
                 lab.lab41();
@@ -16,16 +18,28 @@ public class part1 {
                 lab.lab42();
                 break;
             case 3:
-                lab.lab43();
+                System.out.println("Введите первое число:");
+                int x = scanner.nextInt();
+                System.out.println("Введите второе число:");
+                int y = scanner.nextInt();
+                System.out.println("Введите третье число:");
+                int z = scanner.nextInt();
+                lab.lab43(x,y,z);
                 break;
             case 4:
-                lab.lab44();
+                System.out.println("Введите первое число:");
+                int a = scanner.nextInt();
+                System.out.println("Введите второе число:");
+                int b = scanner.nextInt();
+                System.out.println("Введите третье число:");
+                int c = scanner.nextInt();
+                lab.lab44(a,b,c);
                 break;
             case 5:
-                lab.lab45();
+                lab.lab45(mas);
                 break;
             case 6:
-                lab.lab46();
+                lab.lab46(mas);
                 break;
 
 
@@ -66,14 +80,7 @@ public class part1 {
             System.out.println(result3);
         }
 
-        public void lab43() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите первое число:");
-            int x = scanner.nextInt();
-            System.out.println("Введите второе число:");
-            int y = scanner.nextInt();
-            System.out.println("Введите третье число:");
-            int z = scanner.nextInt();
+        public void lab43(int x,int y,int z) {
             boolean good;
             if (x + y == z) {
                 good = true;
@@ -81,14 +88,8 @@ public class part1 {
             System.out.println(good);
         }
 
-        public void lab44() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите первое число:");
-            int x = scanner.nextInt();
-            System.out.println("Введите второе число:");
-            int y = scanner.nextInt();
-            System.out.println("Введите третье число:");
-            int z = scanner.nextInt();
+        public void lab44(int x, int y,int z) {
+
             boolean good;
             if (x < y && y < z) {
                 good = true;
@@ -96,19 +97,17 @@ public class part1 {
             System.out.println(good);
         }
 
-        public void lab45() {
-            int[] mas = {0, -3, 7, 4, 5, 4, 3};
+        public void lab45(int[]mas) {
             System.out.println(Arrays.toString(mas));
             boolean good;
             if ((mas[0] == 3) || (mas[mas.length - 1] == 3)) {
                 good = true;
             } else good = false;
-
             System.out.println(good);
         }
 
-        public void lab46() {
-            int[] mas = {0, -3, 7, 4, 5, 4, 3};
+        public void lab46(int[]mas) {
+
             System.out.println(Arrays.toString(mas));
             boolean good = false;
             for (int i = 0; mas.length > i; i++)
