@@ -20,6 +20,7 @@ public class SringLabs {
                 "The given string is: This is a test string\n" +
                 "The string reversed word by word is:\n" +
                 "sihT si a tset gnirts\n";
+        String word2="Бяка";
         switch (numlab) {
             case 1:
                 lab.lab51(text);
@@ -28,7 +29,7 @@ public class SringLabs {
                 lab.lab52(word);
                 break;
             case 3:
-                lab.lab53(text2);
+                lab.lab53(text2,word2);
                 break;
             case 4:
                 lab.lab54(text3, sub);
@@ -64,9 +65,9 @@ public class SringLabs {
         } else System.out.println("Слово " + word + " не является палиндромом");
     }
 
-    public void lab53(String text2) {
+    public void lab53(String text2, String word2) {
 
-        String itog = text2.replaceAll("(?i)Бяка", "[вырезано цензурой]");
+        String itog = text2.replaceAll(word2, "[вырезано цензурой]");
         System.out.println(itog);
     }
 
