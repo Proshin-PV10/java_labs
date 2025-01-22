@@ -35,14 +35,10 @@ class ChildClass2 extends ParentClass2{
 class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         ChildClass2 child = new ChildClass2(0,"");
         child.inputAge(scanner);
         child.inputName(scanner);
-
-        System.out.println("Имя пользователя: " + child.getName());
-        System.out.println("Возраст пользователя: " + child.getAge());
-
-        scanner.close();
+        System.out.println("Имя: " + child.getName());
+        System.out.println("Возраст: " + child.getAge());
     }
 }
