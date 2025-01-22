@@ -31,4 +31,5 @@ public class Car {
         this.wheelsNum = wheelsNum;
         this.maxWeight=maxWeight;
     }
+
 }
