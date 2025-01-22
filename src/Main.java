@@ -20,4 +20,6 @@ public class Main {
         double result1=(46+10)*(10d/3);
         System.out.println(result1);
     }
+    int f=10;
+
 }
