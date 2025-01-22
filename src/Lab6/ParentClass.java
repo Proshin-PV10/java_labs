@@ -1,30 +1,34 @@
 package Lab6;
 
-public class ParentClass {
-    int number;
+import java.util.Scanner;
 
-    public int getNumber() {
-        return number;
+public class ParentClass {
+    private int num;
+    public int getNum() {
+        return num;
     }
 
-    public ParentClass (int number){
-        this.number=number;
+    public ParentClass(int number) {
+        this.num = number;
     }
 }
-class ChildClass extends ParentClass{
 
+class ChildClass extends ParentClass {
     public ChildClass(int number) {
         super(number);
     }
-    public void outNumber(){
-        System.out.println("Число из ParrentClass: "+ getNumber());
+
+    public void outNum() {
+        System.out.println("Число из ParentClass: " + getNum());
     }
 }
-abstract class Main {
+
+class Main {
     public static void main(String[] args) {
-
-        ChildClass child = new ChildClass(17);
-        child.outNumber();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите значение Number: ");
+        int number = scanner.nextInt();
+        ChildClass child = new ChildClass(number);
+        child.outNum();
     }
 }
-
